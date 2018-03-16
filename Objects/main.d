@@ -9,3 +9,8 @@
 .\objects\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\mpu_armv7.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: main.h
+.\objects\main.o: init_gpio.h
+.\objects\main.o: lcd.h
+.\objects\main.o: delay.h
+.\objects\main.o: keypad.h
