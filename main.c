@@ -6,6 +6,7 @@
 #include "lcd.h"
 #include "leds.h"
 #include "keypad.h"
+#include "systick.h"
 
 int main()
 {
@@ -13,6 +14,7 @@ int main()
 	uint8_t key_old = 0;
 	
 	GPIO_Init();
+	Systick_Init();
 	
 	LCD_Init();
 
@@ -41,8 +43,12 @@ int main()
 		if ((key != 0) && (key_old == 0)) {
 			//LCD_GotoXY(15,0);
 			LCD_Char(key);
-			LED_Toggle(LED_LD6_B);
+			LED_Toggle(LED_LD3_O);
 		}
 		key_old = key;
+
+		if (Timeout()) {
+			LED_Toggle(LED_LD6_B);
+		}
 	}
 }
