@@ -4,6 +4,7 @@
 #include "init_gpio.h"
 #include "delay.h"
 #include "lcd.h"
+#include "leds.h"
 #include "keypad.h"
 
 int main()
@@ -40,8 +41,8 @@ int main()
 		if ((key != 0) && (key_old == 0)) {
 			//LCD_GotoXY(15,0);
 			LCD_Char(key);
+			LED_Toggle(LED_LD6_B);
 		}
 		key_old = key;
-		
 	}
 }
